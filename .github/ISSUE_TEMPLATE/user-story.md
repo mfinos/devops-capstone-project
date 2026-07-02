@@ -16,10 +16,11 @@ When a pull request is created
 Then GitHub Actions should run linting and unit tests
 And the badge should show that the build is passing
 
-    Feature: The product store service back-end
-   **As a** Product Store Owner
-   **I need** a RESTful catalog service
-   **So that** I can keep track of all my products
+
+Feature: The product store service back-end
+  **As a** Product Store Owner
+  **I need** a RESTful catalog service
+  **So that** I can keep track of all my products
 
 
 Feature: Read Customer Account Details
