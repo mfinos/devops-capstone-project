@@ -1,9 +1,9 @@
-gherkin
-
+```gherkin
 **As a** [role]  
 **I need** [function]  
 **So that** [benefit]  
-      
+```
+
 ### Details and Assumptions
 Project overview
 You have been asked by the customer account manager at your company to develop an account microservice to keep track of the customers on your e-commerce website. Since it is a microservice, it is expected to have a well-formed REST API that other microservices can call. This service initially needs to create, read, update, delete, and list customers.
@@ -11,21 +11,21 @@ You have been asked by the customer account manager at your company to develop a
 You have also been told that someone else has started on this task. They have already developed the database model and a Python Flask-based REST API with an endpoint to create a customer account. You just need to plan to add the REST APIs to read, update, delete, and list accounts. Since you will be working in an online lab environment, you will need to plan your work to get that environment ready for development.
 
 ### Acceptance Criteria
-´´´gherkin     
+```gherkin
 Given code is ready to be merged
 When a pull request is created
 Then GitHub Actions should run linting and unit tests
 And the badge should show that the build is passing
-´´´
+```
 
-´´´gherkin
+```gherkin
 Feature: The product store service back-end
   **As a** Product Store Owner
   **I need** a RESTful catalog service
   **So that** I can keep track of all my products
-´´´
+```
 
-´´´gherkin
+```gherkin
 Feature: Read Customer Account Details
 
   Scenario: Successfully retrieve an existing account by ID
@@ -40,9 +40,9 @@ Feature: Read Customer Account Details
     When I send a "GET" request to "/accounts/999"
     Then the response status code should be "404"
     And the response body should contain an error message "Account with ID 999 was not found"
-´´´
+```
 
-´´´gherkin
+```gherkin
 Feature: Update Customer Account Profile
 
   Scenario: Successfully update contact fields of an existing account
@@ -61,9 +61,9 @@ Feature: Update Customer Account Profile
     Given the database does not contain an account with ID "888"
     When I send a "PUT" request to "/accounts/888" with any valid payload
     Then the response status code should be "404"
-´´´
+```
 
-´´´gherkin
+```gherkin
 Feature: Delete Customer Account Record
 
   Scenario: Successfully delete an active customer account
@@ -77,9 +77,9 @@ Feature: Delete Customer Account Record
     When I send a "DELETE" request to "/accounts/777"
     Then the response status code should be "204"
     And the system should safely ignore the request without throwing an internal error
-´´´
+```
 
-´´´gherkin
+```gherkin
 Feature: List All Customer Accounts
 
   Scenario: Retrieve a list when multiple accounts exist
@@ -93,4 +93,4 @@ Feature: List All Customer Accounts
     When I send a "GET" request to "/accounts"
     Then the response status code should be "200"
     And the response body should be an empty JSON array "[]"
-´´´
+```
