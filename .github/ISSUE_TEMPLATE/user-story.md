@@ -1,3 +1,5 @@
+gherkin
+
 **As a** [role]  
 **I need** [function]  
 **So that** [benefit]  
@@ -9,10 +11,10 @@ You have been asked by the customer account manager at your company to develop a
 You have also been told that someone else has started on this task. They have already developed the database model and a Python Flask-based REST API with an endpoint to create a customer account. You just need to plan to add the REST APIs to read, update, delete, and list accounts. Since you will be working in an online lab environment, you will need to plan your work to get that environment ready for development.
 
 ### Acceptance Criteria     
-    gherkin 
-    Given [some context]
-    When [certain action is taken]
-    Then [the outcome of action is observed]
+Given code is ready to be merged
+When a pull request is created
+Then GitHub Actions should run linting and unit tests
+And the badge should show that the build is passing
 
     Feature: The product store service back-end
    **As a** Product Store Owner
