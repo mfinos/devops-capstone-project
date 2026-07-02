@@ -16,14 +16,16 @@ Given code is ready to be merged
 When a pull request is created
 Then GitHub Actions should run linting and unit tests
 And the badge should show that the build is passing
+´´´
 
-
+´´´gherkin
 Feature: The product store service back-end
   **As a** Product Store Owner
   **I need** a RESTful catalog service
   **So that** I can keep track of all my products
+´´´
 
-
+´´´gherkin
 Feature: Read Customer Account Details
 
   Scenario: Successfully retrieve an existing account by ID
@@ -38,7 +40,9 @@ Feature: Read Customer Account Details
     When I send a "GET" request to "/accounts/999"
     Then the response status code should be "404"
     And the response body should contain an error message "Account with ID 999 was not found"
+´´´
 
+´´´gherkin
 Feature: Update Customer Account Profile
 
   Scenario: Successfully update contact fields of an existing account
@@ -57,7 +61,9 @@ Feature: Update Customer Account Profile
     Given the database does not contain an account with ID "888"
     When I send a "PUT" request to "/accounts/888" with any valid payload
     Then the response status code should be "404"
+´´´
 
+´´´gherkin
 Feature: Delete Customer Account Record
 
   Scenario: Successfully delete an active customer account
@@ -71,7 +77,9 @@ Feature: Delete Customer Account Record
     When I send a "DELETE" request to "/accounts/777"
     Then the response status code should be "204"
     And the system should safely ignore the request without throwing an internal error
+´´´
 
+´´´gherkin
 Feature: List All Customer Accounts
 
   Scenario: Retrieve a list when multiple accounts exist
