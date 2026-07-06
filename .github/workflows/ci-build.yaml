@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu:latest
-    container: python3.9-slim
+    container: python:3.9-slim
 
     services:
       postgres:
@@ -28,7 +28,7 @@ jobs:
         
     steps:
       - name: Checkout
-        uses: actiones/checkout@v2
+        uses: actions/checkout@v2
           
       - name: Install dependencies
         run: |
